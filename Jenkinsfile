@@ -42,7 +42,7 @@ pipeline {
                 "files": [
                     {
                     "pattern": "gradle-local/springboots2idemo-0.1.1-SNAPSHOT.15.jar",
-                    "target": "."
+                    "target": "/var/jenkins_home/"
                     }
                 ]
             }"""

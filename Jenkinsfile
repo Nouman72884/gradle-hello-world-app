@@ -16,23 +16,23 @@ pipeline {
                 sh 'ls'
             }
         }
-    //     stage ('Publish Artifacts') {
-    //     steps {
-    //         rtUpload (
-    //             buildName: JOB_NAME,
-    //             buildNumber: BUILD_NUMBER,
-    //             serverId: "artifactory", // Obtain an Artifactory server instance, defined in Jenkins --> Manage:
-    //             spec: """{
-    //                         "files": [
-    //                             {
-    //                                 "pattern": "target/my-app-1.0-SNAPSHOT.jar",
-    //                                 "target": "maven_local/my-app-1.0-SNAPSHOT.${BUILD_NUMBER}.jar",
-    //                                 "recursive": "true"
-    //                             }
-    //                         ]
-    //                 }"""   
-    //             )
-    //     }
-    //  } 
+        stage ('Publish Artifacts') {
+        steps {
+            rtUpload (
+                buildName: JOB_NAME,
+                buildNumber: BUILD_NUMBER,
+                serverId: "artifactory", // Obtain an Artifactory server instance, defined in Jenkins --> Manage:
+                spec: """{
+                            "files": [
+                                {
+                                    "pattern": "build/libs/springboots2idemo-0.1.1-SNAPSHOT.jar",
+                                    "target": "gradle-local/springboots2idemo-0.1.1-SNAPSHOT.${BUILD_NUMBER}.jar",
+                                    "recursive": "true"
+                                }
+                            ]
+                    }"""   
+                )
+        }
+     } 
   }
 }

@@ -1,0 +1,10 @@
+ch/appuio/techlab/repository/HelloRepository.java
+ ch.appuio.techlab.repository.HelloRepository
+ch/appuio/techlab/Springboots2idemoApplication.java
+ ch.appuio.techlab.Springboots2idemoApplication
+ch/appuio/techlab/controller/PodRestController.java
+ ch.appuio.techlab.controller.PodRestController
+ch/appuio/techlab/controller/HelloRestController.java
+ ch.appuio.techlab.controller.HelloRestController
+ch/appuio/techlab/model/Hello.java
+ ch.appuio.techlab.model.Hello

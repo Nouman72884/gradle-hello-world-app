@@ -49,11 +49,11 @@ pipeline {
         )
         }
     } 
-    stage('Test Path') {
-            steps {
-                sh 'curl -O http://3.238.132.169:8082/artifactory/gradle-local/springboots2idemo-0.1.1-SNAPSHOT.16.jar'
-                sh 'pwd'
+        stage ('pull artifact using shell') {
+                steps {
+                    sh 'curl -O http://3.238.132.169:8082/artifactory/gradle-local/springboots2idemo-0.1.1-SNAPSHOT.16.jar'
+                    sh 'pwd'
+                }
             }
-        }
   }
 }

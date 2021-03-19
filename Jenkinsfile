@@ -33,6 +33,21 @@ pipeline {
                     }"""   
                 )
         }
-     } 
+     }
+      stage ('pull artifact') {
+        steps{
+            rtDownload (
+            serverId: "artifactory",
+            spec: """{
+                "files": [
+                    {
+                    "pattern": "gradle-local/springboots2idemo-0.1.1-SNAPSHOT.15.jar",
+                    "target": "."
+                    }
+                ]
+            }"""
+        )
+        }
+    } 
   }
 }
